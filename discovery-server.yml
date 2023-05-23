@@ -1,6 +1,8 @@
 ﻿server:
   port: 8761
-
+spring:
+  zipkin:
+    baseUrl: http://tracing-server:9411
 eureka:
   instance:
     hostname: localhost
