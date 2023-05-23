@@ -16,14 +16,15 @@ server:
 
 # Internationalization
 spring.messages.basename: messages/messages
+spring:
+  zipkin:
+    baseUrl: http://tracing-server:9411
 
 ---
 spring:
   config:
     activate:
       on-profile: docker
-  zipkin:
-    baseUrl: http://tracing-server:9411
 eureka:
   client:
     serviceUrl:
