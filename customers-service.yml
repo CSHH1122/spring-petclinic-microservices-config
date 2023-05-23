@@ -1,4 +1,6 @@
 ﻿spring:
+   zipkin:
+     baseUrl: http://tracing-server:9411
   config:
     activate:
       on-profile: default
@@ -6,7 +8,8 @@ eureka:
   instance:
     # enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
-
+tag:
+  001
 ---
 spring:
   config:
